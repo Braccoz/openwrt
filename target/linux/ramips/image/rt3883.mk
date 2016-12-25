@@ -38,6 +38,7 @@ endef
 
 Image/Build/Profile/CYSWR1100=$(call BuildFirmware/Seama/$(1),$(1),cy-swr1100,CY-SWR1100,wrgnd10_samsung_ss815,$(ralink_default_fw_size_8M))
 Image/Build/Profile/DIR645=$(call BuildFirmware/Seama/$(1),$(1),dir-645,DIR-645,wrgn39_dlob.hans_dir645,$(ralink_default_fw_size_8M))
+Image/Build/Profile/DIR815A1=$(call BuildFirmware/Seama/$(1),$(1),dir-815-a1,DIR-815-A1,wrgnd08_dlob_dir815,$(ralink_default_fw_size_4M))
 hpm_mtd_size=16449536
 Image/Build/Profile/HPM=$(call BuildFirmware/CustomFlash/$(1),$(1),hpm,HPM,$(hpm_mtd_size))
 Image/Build/Profile/RTN56U=$(call BuildFirmware/RTN56U/$(1),$(1),rt-n56u,RT-N56U)
@@ -51,6 +52,7 @@ Image/Build/Profile/BR6475ND=$(call BuildFirmware/EdimaxCombined/$(1),$(1),br-64
 define Image/Build/Profile/Default
 	$(call Image/Build/Profile/CYSWR1100,$(1))
 	$(call Image/Build/Profile/DIR645,$(1))
+	$(call Image/Build/Profile/DIR815A1,$(1))
 	$(call Image/Build/Profile/HPM,$(1))
 	$(call Image/Build/Profile/RTN56U,$(1))
 	$(call Image/Build/Profile/BR6475ND,$(1))

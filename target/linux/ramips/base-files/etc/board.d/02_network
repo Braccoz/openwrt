@@ -99,6 +99,7 @@ ramips_setup_interfaces()
 		;;
 	ar670w|\
 	ar725w|\
+	dir-815-a1 | \
 	rt-n15|\
 	wl-351)
 		ucidef_add_switch "switch0" \
@@ -282,7 +283,8 @@ ramips_setup_macs()
 		wan_mac=$(mtd_get_mac_binary devdata 7)
 		;;
 	cy-swr1100|\
-	dir-645)
+	dir-645 | \
+	dir-815-a1)
 		lan_mac=$(mtd_get_mac_ascii nvram lanmac)
 		wan_mac=$(mtd_get_mac_ascii nvram wanmac)
 		;;

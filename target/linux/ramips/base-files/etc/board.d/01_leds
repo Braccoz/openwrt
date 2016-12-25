@@ -111,6 +111,12 @@ dir-620-a1)
 	ucidef_set_led_default "wan" "WAN LED (amber)" "$board:amber:wan" "1"
 	set_wifi_led "rt2800pci-phy0::radio"
 	;;
+dir-815-a1)
+	ucidef_set_led_default "status" "Status LED (amber)" "$board:amber:status" "0"
+	ucidef_set_led_default "status2" "Status LED (green)" "$board:green:status" "1"
+	ucidef_set_led_default "wps" "WPS" "$board:blue:wps" "0"
+	ucidef_set_led_netdev "wan" "WAN" "$board:green:wan" "eth0.2"
+	;;
 dir-300-b7|\
 dir-320-b1|\
 dir-610-a1|\

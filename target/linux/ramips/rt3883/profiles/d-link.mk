@@ -14,3 +14,13 @@ define Profile/DIR645/Description
 	Package set compatible with the D-Link DIR-645 board.
 endef
 $(eval $(call Profile,DIR645))
+
+define Profile/DIR815A1
+	NAME:=D-Link DIR-815-A1
+	PACKAGES:=kmod-usb-core kmod-usb-ohci kmod-usb2 swconfig
+endef
+
+define Profile/DIR815A1/Description
+	Package set compatible with the D-Link DIR-815-A1 board.
+endef
+$(eval $(call Profile,DIR815A1))

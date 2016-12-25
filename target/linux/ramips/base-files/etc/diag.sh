@@ -141,6 +141,7 @@ get_status_led() {
 	zte-q7)
 		status_led="$board:red:status"
 		;;
+	dir-815-a1|\
 	mr-102n)
 		status_led="$board:amber:status"
 		;;
